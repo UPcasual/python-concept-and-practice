@@ -1,0 +1,8 @@
+este es el primero commit para git hub en el main brainch 
+que se aprendio actualmente como iniciar git hub 
+en la capeta que se desea se inicia git init 
+se hacen la agregacion de los archivos que se desean 
+con 
+git add [nombre de archivo]
+para poder commentar el commit es con 
+git commit -m "comentario"
