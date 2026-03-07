@@ -12,12 +12,14 @@ Structure your program per the below, wherein convert is a function (that can be
 def main():
     time=str(input("que hora es: "))
     convert_time= convert(time)
-    if convert_time  >= 7 <= 8:
-        print('es hora de la comida')
-    elif convert_time  >=12 <= 13:
+    if convert_time  >= 7 and convert_time <= 8:
+        print('es hora del desayuno')
+    elif convert_time  >=12 and convert_time<= 13:
         print("hora del almuerzo")
-    elif convert_time >=18 <= 19 :
+    elif convert_time >=18 and convert_time<= 19 :
         print("hora de la cena")
+    else:
+        print("")
 
 def convert(time):
     convert = time.split(":")
@@ -28,3 +30,4 @@ def convert(time):
 
 if __name__ == "__main__":
     main()
+## terminado 

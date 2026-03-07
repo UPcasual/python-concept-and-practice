@@ -11,7 +11,8 @@ When you download a file from a web server, that server sends an HTTP header, al
 
 See developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for common types.
 
-In a file called extensions.py, implement a program that prompts the user for the name of a file and then outputs that file’s media type if the file’s name ends, case-insensitively, in any of these suffixes:
+In a file called extensions.py, implement a program that prompts the user for the name of a file and then outputs that file’s media type if the file’s name ends, 
+case-insensitively, in any of these suffixes:
 
     .gif
     .jpg
@@ -23,3 +24,40 @@ In a file called extensions.py, implement a program that prompts the user for th
 
 If the file’s name ends with some other suffix or has no suffix at all, output application/octet-stream instead, which is a common default.
 '''
+nombre = str(input("ingresa el nombre de tu archivo"))
+name_lower = nombre.lower()
+
+def transf(name_lower):
+    nombre_suffix = nombre.split(".")
+
+    if nombre_suffix[1] == "gif":
+        print("el archivo es una image/gif")
+    elif nombre_suffix[1] == ".jpg":
+        print("el archivo es una image/jpeg")
+    elif nombre_suffix[1] == "jpeg":
+        print("el archivo es una image/jpeg")
+    elif nombre_suffix[1] == "png":
+        print("el archivo es una image/png")
+    elif nombre_suffix[1] == "pdf":
+        print("el archivo es una application/pdf")
+    elif nombre_suffix[1] == "txt":
+        print("el archivo es una text/plain")
+    elif nombre_suffix[1] == "zip":
+        print("el archivo es una application/zip")
+    else:
+        print(" no es valido")
+    return transf
+
+
+transf(name_lower)
+
+
+
+
+
+    
+    
+    
+    
+    
+## aqui tal vez debo utilizar la funcion match 
