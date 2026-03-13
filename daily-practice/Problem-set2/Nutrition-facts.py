@@ -9,3 +9,27 @@ In a file called nutrition.py, implement a program that prompts consumers users 
   Ignore any input that isn’t a fruit.
 
 '''
+Frutas = {
+  "apple":"130",
+  "avocado":"50",
+  "banana":"110",
+  "cantaloupe":"50",
+  "grapefruit":"60",
+  "grapes":"90",
+  "kiwi":"90"
+}
+
+def valido(texto_min):
+  global Frutas
+  if texto_min in Frutas:
+    print("las calorias son " , Frutas[texto_min])
+  else:
+    print("ingresa una fruta valida")
+
+
+texto = str(input("ingrese una fruta"))
+texto_min = texto.lower()
+valido(texto_min)
+
+
+#terminado 
