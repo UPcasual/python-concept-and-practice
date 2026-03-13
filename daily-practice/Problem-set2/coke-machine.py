@@ -6,19 +6,35 @@ Once the user has inputted at least 50 cents, output how many cents in change th
 and ignore any integer that isn’t an accepted denomination.
 
 '''
-permitido=[5,10,25]
+deuda = 50
+def deuda1(dinero):
+    global deuda
+    deuda = deuda - dinero
+    print("falta ingresar esta cantidad", deuda)
+    return deuda # funcion lista
 
-def suma(dinero):
-    dinero = 0
-    total = 0 + dinero
-    return total
-
-
-while total != 50:
-    dinero = int(input("ingresa las monedas: "))
-    if dinero != permitido:
-        print("este monto no esta permitido")
+def valido(dinero):
+    permitido=[5,10,25]
+    for i in permitido: # esta forma tambien es valida para comprobar el valor en la lista 
+        if dinero == i:
+            return i
     else:
-        total = suma(dinero)
-        print(total)
+        print("ingresa una moneda valida")
+#    if dinero in permitido:  esta formas son valida cada uno de los items en la lista para comprobar que esten 
 
+
+
+def main():
+    while deuda >0:
+        dinero = int(input("ingresa una moneda"))
+        resultado_vali = valido(dinero)
+
+        if dinero != resultado_vali:
+            print("esta moneda no es valida")
+        else:
+            deuda1(dinero)
+    print("el valor esta completo")
+
+main()
+
+#terminado
