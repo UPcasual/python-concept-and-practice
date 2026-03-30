@@ -9,16 +9,22 @@ prefixing each line with the number of times the user inputted that item. No nee
 lista = {} # para agregar valor y una cantidad se debe utilziar un diccionarios. 
 
 
-def orden():
+#def orden():
     #la lista debe ser ordenado y se le debe agregar un valor de veces que se escribre
 
 def main():
     while True:
         try:
             texto = str(input("ingresa la lista de la compra: "))
-            texto_upp = texto.upper()
+            texto_upp = texto.upper() 
+            if texto_upp == lista
+
+            else:
+                
+            for i in lista:
+                print(lista())
             #ingresar texto a la lista 
-            print(texto_upp())
+            print(texto_upp)
         except EOFError:
             break
 
